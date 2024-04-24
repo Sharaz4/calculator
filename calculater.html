@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blanchedalmond;
+        }
+        .container{
+            background-color: rgb(23, 22, 22);
+            width: 90%;
+            max-width: 350px;
+            margin: 100px auto 0px;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+        .display input{
+            width: 100%;
+            font-size: 30px;
+            outline: 0;
+            border: 0px;
+            margin: 5px 0px;
+            text-align: right;
+        }
+        input{
+            background-color: rgb(43, 37, 37);
+            padding: 20px;
+            font-size: 15px;
+            width: 60px;
+            margin: 7px;
+            outline: none;
+            color: #fff;
+            box-shadow: rgba(251, 250, 250, 0.3) 0px 2px 2px 2px;
+            border-radius: 10px;
+        }
+        .Equal{
+            width: 135px;
+        }
+        .div input:last-child{
+            background-color: Red;
+            border: red;
+            box-shadow: rgba(247, 3, 3, 0.3) 0px 2px 2px 2px;
+        }
+        .div1 input:last-child{
+            background-color: Red;
+            border: red;
+            box-shadow: rgba(247, 3, 3, 0.3) 0px 2px 2px 2px;
+            color: #fff;
+        }
+
+        .div1 input{
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div class="div1">
+                    <input type="button" value="AC"
+                        onclick="display.value = ''">
+                    <input type="button" value="DE"
+                        onclick="display.value = display.value.toString().slice(0,-1) ">
+                    <input type="button" value="."
+                        onclick="display.value += '.'">
+                    <input type="button" value="/"
+                        onclick="display.value += '/'">
+                </div>
+                <div class="div">
+                    <input type="button" value="7"
+                        onclick="display.value += '7'">
+                    <input type="button" value="8"
+                        onclick="display.value += '8'">
+                    <input type="button" value="9"
+                        onclick="display.value += '9'">
+                    <input type="button" value="*"
+                        onclick="display.value += '*'">
+                </div>
+                <div class="div">
+                    <input type="button" value="4"
+                        onclick="display.value += '4'">
+                    <input type="button" value="5"
+                        onclick="display.value += '5'">
+                    <input type="button" value="6"
+                        onclick="display.value += '6'">
+                    <input type="button" value="-"
+                        onclick="display.value += '-'">
+                </div>
+                <div class="div">
+                    <input type="button" value="1"
+                        onclick="display.value += '1'">
+                    <input type="button" value="2"
+                        onclick="display.value += '2'">
+                    <input type="button" value="3"
+                        onclick="display.value += '3'">
+                    <input type="button" value="+"
+                        onclick="display.value += '+'">
+                </div>
+                <div class="div">
+                    <input type="button" value="0"
+                        onclick="display.value += '0'">
+                    <input type="button" value="00"
+                        onclick="display.value += '00'">
+                    <input type="button" value="=" class="Equal"
+                        onclick="display.value=eval(display.value)">
+
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
